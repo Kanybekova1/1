@@ -8,18 +8,18 @@ def initialize_cargo():
     ]
 
 def move_cargo(cargo):
-    for item in cargo:
-        item["location"] = random.randint(1, 7)
+    for i in cargo:
+        i["location"] = random.randint(1, 7)
 
 def check_total_weight(found_cargo):
-    total_weight = sum(item["weight"] for item in found_cargo)
+    total_weight = sum(i ["weight"] for i in found_cargo)
     return total_weight == 713
 
 def main():
     cargo = initialize_cargo()
     found_cargo = []
 
-    print("")
+    print("It is a program, which will help Martians find their Cargo!")
     print("Please input location coordinates to find the cargo (1-7).")
 
     while len(found_cargo) < 3:
